@@ -1,5 +1,4 @@
-FROM openjdk:17-jdk-slim
-WORKDIR /app
-COPY target/rest-0.0.1-SNAPSHOT.jar /app/rest-0.0.1-SNAPSHOT.jar
-EXPOSE 8081
-ENTRYPOINT ["java", "-jar", "rest-0.0.1-SNAPSHOT.jar"]
+from openjdk:17
+workdir /app
+copy ./rest-0.0.1-SNAPSHOT.jar /app/rest-0.0.1-SNAPSHOT.jar
+cmd ["java", "-jar", "rest-0.0.1-SNAPSHOT.jar"]
